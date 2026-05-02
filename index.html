@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Elect: Your Election Assistant</title>
+    <meta name="description" content="Interactive election assistant for college students. Learn about the election process, timelines, and how virtuality plays a role.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <nav>
+            <div class="logo"><i class="fa-solid fa-check-to-slot"></i> Campus Elect</div>
+            <ul>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#virtuality">Digital Impact</a></li>
+                <li><a href="#assistant">Assistant</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Master the <span class="gradient-text">Election Process</span></h1>
+            <p>Your interactive guide to understanding voting, campaigns, and how technology is shaping the future of democracy. Designed for college students.</p>
+            <a href="#timeline" class="cta-button">Start Learning</a>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </header>
+
+    <section id="timeline" class="timeline-section">
+        <h2>The Election <span class="gradient-text">Timeline</span></h2>
+        <p class="section-subtitle">Follow the steps from registration to results.</p>
+        
+        <div class="timeline-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item" data-step="1">
+                <div class="timeline-icon"><i class="fa-solid fa-address-card"></i></div>
+                <div class="timeline-content">
+                    <h3>1. Voter Registration</h3>
+                    <p>Before you can vote, you must register. Check your eligibility and register early. Many states allow online registration, making it easy for students.</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item" data-step="2">
+                <div class="timeline-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                <div class="timeline-content">
+                    <h3>2. Campaigning & Debates</h3>
+                    <p>Candidates present their platforms. Engage with virtual town halls, watch debates, and research where candidates stand on issues you care about.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item" data-step="3">
+                <div class="timeline-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <div class="timeline-content">
+                    <h3>3. Early & Absentee Voting</h3>
+                    <p>Can't make it home on Election Day? Request a mail-in/absentee ballot to be sent to your college address, or find early voting locations nearby.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item" data-step="4">
+                <div class="timeline-icon"><i class="fa-solid fa-person-booth"></i></div>
+                <div class="timeline-content">
+                    <h3>4. Election Day</h3>
+                    <p>The main event. Head to your assigned polling place, cast your ballot, and ensure your voice is heard!</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item" data-step="5">
+                <div class="timeline-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <div class="timeline-content">
+                    <h3>5. Results & Certification</h3>
+                    <p>Votes are counted, results are projected, and eventually officially certified. The peaceful transfer of power begins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="virtuality" class="virtuality-section">
+        <h2>Virtuality & <span class="gradient-text">Elections</span></h2>
+        <p class="section-subtitle">How the digital world contributes to modern democracy</p>
+        
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-hashtag"></i></div>
+                <h3>Social Media Mobilization</h3>
+                <p>Digital platforms allow students to organize rallies, share info rapidly, and mobilize voters in unprecedented ways, driving higher youth turnout.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-laptop-file"></i></div>
+                <h3>Virtual Town Halls</h3>
+                <p>Candidates are increasingly using virtual streams like Twitch, YouTube, and Zoom to connect directly with college demographics and answer live Q&A.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>Digital Security & E-Voting</h3>
+                <p>Researching secure e-voting systems and protecting election data against misinformation are massive parts of the modern virtual election landscape.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="assistant" class="assistant-section">
+        <div class="assistant-container">
+            <div class="assistant-header">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Democracy" alt="AI Assistant" class="assistant-avatar">
+                <div>
+                    <h2>Interactive Assistant</h2>
+                    <p>Ask questions about voting and the election process.</p>
+                </div>
+            </div>
+            <div class="chat-window" id="chatWindow">
+                <div class="message bot">
+                    <div class="message-content">Hello! I'm your Campus Elect Assistant. Do you have any questions about registering, polling places, or the election timeline?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <div class="quick-replies">
+                    <button class="quick-reply" onclick="sendQuickReply('How do I register online?')">How do I register online?</button>
+                    <button class="quick-reply" onclick="sendQuickReply('What is early voting?')">What is early voting?</button>
+                    <button class="quick-reply" onclick="sendQuickReply('Take a quiz')">Take a quiz</button>
+                    <button class="quick-reply" onclick="sendQuickReply('How does social media affect elections?')">How does social media affect elections?</button>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="userInput" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+                    <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Campus Elect. Designed for empowering the student vote.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
