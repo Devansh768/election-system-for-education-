@@ -42,3 +42,4 @@ const knowledgeBase = {
 ## Purpose
 
 This project was built for **educational purposes** to simplify the complex voting process for young adults and emphasize the role of technology in civic engagement.
+# Documentation updates
